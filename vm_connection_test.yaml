@@ -1,0 +1,11 @@
+config:
+
+  target: "http://192.168.56.101:5678"  #Nginx가 실행중인 가상머신의 오픈포트
+  phases:
+    - duration: 30
+      arrivalRate: 10
+     
+scenarios:
+  - flow:
+      - get:
+          url: "/"
